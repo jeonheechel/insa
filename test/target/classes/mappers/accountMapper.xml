@@ -1,3 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="academicMapper"></mapper>
+<mapper namespace="accountMapper">
+	<insert id="insert">
+	   INSERT INTO ACCOUNT(    b_num 
+	   					      , m_name 
+	   					      , Industry 
+	   					      , person  
+	   					      , phone
+	   					      )
+	                 VALUES(    #{b_num}
+	                 		  , #{m_name}
+	                 		  , #{Industry}
+	                 		  , #{person} 
+	                 		  , #{phone} 
+	                 		  )
+   
+   </insert>
+   
+   <select id="list" resultType="com.inter.vo.AccountVO">
+		SELECT   b_num
+			   , m_name
+			   , Industry
+			   , person
+			   , phone
+		  FROM ACCOUNT
+		 <!--  ORDER BY b_num DESC -->
+	</select>
+	
+	<select id="read" parameterType="int" resultType="com.inter.vo.AccountVO">
+		SELECT   b_num
+			   , m_name
+			   , Industry
+			   , person
+			   , phone
+		  FROM ACCOUNT
+		  WHERE b_num = #{b_num}
+		 
+	</select>
+
+
+
+
+</mapper>
