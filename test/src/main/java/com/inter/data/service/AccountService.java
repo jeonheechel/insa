@@ -1,5 +1,5 @@
 package com.inter.data.service;
 
-public interface AcademicService {
+public interface AccountService {
 
 }

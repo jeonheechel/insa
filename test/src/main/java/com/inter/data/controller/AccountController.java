@@ -1,5 +1,5 @@
 package com.inter.data.controller;
 
-public class AcademicController {
+public class AccountController {
 
 }

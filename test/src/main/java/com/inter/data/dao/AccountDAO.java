@@ -1,5 +1,5 @@
 package com.inter.data.dao;
 
-public interface AcademicDAO {
+public interface AccountDAO {
 
 }
